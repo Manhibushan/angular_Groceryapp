@@ -8,6 +8,7 @@ export class DataService {
 private _baseurl="http://apolis-grocery.herokuapp.com/api/"
 private _categoryurl="category"
 private _subcat="subcategory/"
+private _productsurl="products/"
   constructor(private http:HttpClient) { }
   getCategories(): Observable <any []>
   {
@@ -15,7 +16,11 @@ private _subcat="subcategory/"
 
 
   }
-  getSubCategory(catId){
+  getSubCategory(catId): Observable<any>{
     return this.http.get<any>(`${this._baseurl + this._subcat + catId}`)
+  }
+  getProducts(subId):Observable<any>
+  {
+    return this.http.get<any>(  ` ${this._baseurl+this._productsurl+subId} `)
   }
 }

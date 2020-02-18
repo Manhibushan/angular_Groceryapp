@@ -12,7 +12,7 @@ public _imgurl='http://rjtmobile.com/grocery/images/';
   constructor(private dataservice:DataService) { }
 
   ngOnInit(): void {
-    this.dataservice.getCategories(1).subscribe(
+    this.dataservice.getCategories().subscribe(
       x=>this.categories=x.data
 
     )
