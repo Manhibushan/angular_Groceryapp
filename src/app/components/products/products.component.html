@@ -1,10 +1,12 @@
 
 <div class="container">
+    
     <h2>Sub Category</h2>
     <div class="row">
         <div class="col-lg-3 ">
             <ul class= "list-group" *ngFor="let subcat of subCategory">
-                <li >{{ subcat.subName }}</li>
+               <!-- <li >{{ subcat.subName }}</li>-->
+                <li style="cursor : pointer;" (click)="onSelectSubCategory(subcat.subId)" class="list-group-item"> {{ subcat.subName}} </li>
             </ul>
            
         </div>
@@ -16,6 +18,7 @@
                     <div class="card-body">
                         <h5 class="card-text text-center">{{product.productName}}</h5>
                         <h1>{{ product.mrp*70| currency:'INR'}}</h1>
+                        <button (click)="addToCart( product )" class="btn btn-primary">Addtocart</button>
                     </div>
                 </div>
             </div>

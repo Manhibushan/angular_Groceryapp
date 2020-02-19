@@ -15,9 +15,10 @@
         
       </div>-->
 
-<div class="row">
-<div class="card" style="width:16rem;" *ngFor="let category of categories">
-  <img src="{{_imgurl+category.catImage}}" class="card-img-top" alt="...">
+<div class="row" >
+<div class="card" style="width:16rem;" *ngFor="let category of categories" >
+  <div (click)="onSelectCategory(category)">
+  <img src="{{_imgurl+category.catImage}}"  class="card-img-top" alt="...">
   <div class="card-body">
     <h4 class="card-text text-center">{{category.catName}}</h4>
     <!--<a href="#" class="btn btn-primary">Buy</a>-->
@@ -25,3 +26,5 @@
 </div>
 </div>
 </div>
+</div>
+

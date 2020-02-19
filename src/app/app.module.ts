@@ -7,7 +7,12 @@ import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ProductsComponent } from './components/products/products.component';
+import { CartComponent } from './components/cart/cart.component';
 
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
+import {AppRoutingModule} from './app-routing.module';
+import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -15,11 +20,18 @@ import { ProductsComponent } from './components/products/products.component';
     HomeComponent,
     HeaderComponent,
     FooterComponent,
-    ProductsComponent
+    ProductsComponent,
+    CartComponent,
+    LoginComponent,
+    RegisterComponent,
+    PagenotfoundComponent,
+    
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
