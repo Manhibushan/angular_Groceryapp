@@ -13,6 +13,7 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import {AppRoutingModule} from './app-routing.module';
 import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component'
+import { FormsModule,ReactiveFormsModule} from '@angular/forms'
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +31,9 @@ import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.co
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
     
   ],
   providers: [],
