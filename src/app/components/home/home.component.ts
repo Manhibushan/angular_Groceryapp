@@ -14,7 +14,7 @@ public _imgurl='http://rjtmobile.com/grocery/images/';
 
   ngOnInit(): void {
     this.dataservice.getCategories().subscribe(
-      x=>this.categories=x
+      x=>this.categories=x.data
 
       
     )
